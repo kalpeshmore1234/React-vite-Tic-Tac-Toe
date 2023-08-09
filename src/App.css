@@ -1,0 +1,122 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: #900C3F;
+  color: white;
+}
+
+.square {
+  background: #fff;
+  outline: 1px solid;
+  float: left;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 4rem;
+  height: 7rem;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 8rem;
+}
+
+.full-board{
+  display: grid;
+  place-items: center;
+ background-color: #900C3F;
+  width: 26em;
+ 
+}
+
+.board-row:after {
+    content : " ";
+    display: table;
+    clear: left;
+}
+
+
+.status {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-weight:bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+.game{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.game-info {
+  margin-top: 7.5rem;
+  margin-left: 0.2em;
+  
+}
+
+li{
+  font-size: 1em;
+}
+
+.list-moves{
+  margin-bottom: 0.5em;
+}
+
+button{
+  font-size: 1em;
+  background-color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 682px) {
+    body{
+      display: grid;
+      place-items: center;
+    }
+
+     .game{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+     }
+
+     .game-info {
+      margin:0;
+      
+    }
+
+    .full-board{
+      margin-bottom: 1em;
+    }
+}
+
+@media screen  and (max-width: 483px){
+  .square {
+    background: #fff;
+    outline: 1px solid;
+    float: left;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 2rem;
+    height: 5rem;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 6rem;
+  }
+
+  .full-board{
+    width: 19em;
+  }
+
+}
